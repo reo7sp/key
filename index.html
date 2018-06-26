@@ -14,35 +14,44 @@
             margin: 16px;
         }
 
-        #container {
+        a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #777;
+        }
+        a:hover {
+            color: #999;
+            border-bottom-color: #444;
+        }
+        h1 a {
+            border-bottom-width: 2px;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
         }
         @media (min-width: 640px) {
-            #container {
+            .container {
                 margin-top: 200px;
             }
         }
         @media (max-width: 640px) {
-            #container {
+            .container {
                 margin-top: 64px;
             }
         }
 
-        #site-header {
+        .site-header {
             margin-bottom: 1.5em;
         }
 
-        #site-header a {
-            color: #fff;
-        }
-
-        #key {
+        .key {
             font-family: Menlo, Consolas, monospace;
             word-wrap: break-word;
         }
 
-        #tip {
+        .tip {
             font-size: 0.9em;
             color: #666;
         }
@@ -55,22 +64,21 @@
 
         .code a {
             color: inherit;
-            text-decoration: inherit;
+            border-bottom-width: 0;
         }
-
         .code a:hover {
-            text-decoration: underline;
+            border-bottom-width: 1px;
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <h1 id="site-header">key.<a href="//olezh.es">olezh.es</a></h1>
-        <p id="key">
+    <div class="container">
+        <h1 class="site-header">key.<a href="//olezh.es">olezh.es</a></h1>
+        <p class="key">
             ssh&#8209;rsa&nbsp;AAAAB3NzaC1yc2EAAAADAQABAAABAQDDYHDXcqPUPi98iXMf1gnoCceTFtoGAlAVZOzDjygS4vSojeNTh+ei2IxUcRaulbyBhypTM+qXkjtK2a2hAeOGKLSYUoaSGnfJIVg2wFnjcjSv6ZltNUtwCREPtdbNEIXxb7APLpO08axW7MpAWiTjDOiaJg002Fm4LZiRVehvJa9QDnYQmD3XOnnTwyYy4RwdVm/XLMxA2FC5p9Ar2KMP78Lfx34x6H293xZbyqtIaR7n34WtpYa5BuBsT2MxtU7B9j8LmuV7BP0jGVEt35BYsmzSG/hn6ovhMpBApt6ZUro2Tam/JGnZLX0haXIO7K0G62mtk+h9W8IKHwIlXkrh&nbsp;reo7sp@reo7sp
         </p>
-        <p id="tip">
+        <p class="tip">
             <b>Tip:</b>&nbsp;&nbsp;<span class="code">curl <a href="/key.txt">https://key.olezh.es/key.txt</a> &gt;&gt; .ssh/authorized_keys</span>
         </p>
     </div>
